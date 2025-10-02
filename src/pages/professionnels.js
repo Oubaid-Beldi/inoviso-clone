@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
+import Seo from "../components/seo"
 
 const ProfessionnelsPage = () => {
   const clientTypes = [
@@ -139,7 +140,14 @@ const ProfessionnelsPage = () => {
   ]
 
   return (
+    
     <Layout>
+              <Seo
+        title="Professionnels - Partenaire B2B isolation"
+        description="Partenaire de confiance pour vos projets d'isolation thermique par l'extérieur. Bailleurs sociaux, entreprises générales, collectivités. Expertise technique garantie."
+        keywords="isolation professionnelle, bailleur social, entreprise générale, collectivité, partenariat B2B, sous-traitance"
+        pathname="/professionnels/"
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">

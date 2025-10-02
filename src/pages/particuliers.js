@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
+import Seo from "../components/seo"
 
 const ParticuliersPage = () => {
   const benefits = [
@@ -130,6 +131,12 @@ const ParticuliersPage = () => {
 
   return (
     <Layout>
+              <Seo
+        title="Particuliers - Isolation de votre maison"
+        description="Solutions d'isolation thermique par l'extérieur pour particuliers. Réduisez vos factures de chauffage jusqu'à 30%. Aides financières disponibles. Devis gratuit."
+        keywords="isolation maison, économies chauffage, aides financières, MaPrimeRénov, particulier, rénovation énergétique"
+        pathname="/particuliers/"
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
         <div className="container mx-auto px-4">

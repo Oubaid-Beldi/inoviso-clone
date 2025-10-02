@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
+import Seo from "../components/seo"
 
 const AboutPage = () => {
   const stats = [
@@ -101,6 +102,12 @@ const AboutPage = () => {
 
   return (
     <Layout>
+        <Seo
+        title="Qui sommes-nous ?"
+        description="Découvrez l'histoire et l'expertise d'Inoviso, leader de l'isolation thermique par l'extérieur depuis plus de 15 ans. Notre mission, nos valeurs, notre équipe."
+        keywords="entreprise isolation, histoire Inoviso, expertise ITE, équipe professionnelle, certifications RGE"
+        pathname="/qui-sommes-nous/"
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
         <div className="container mx-auto px-4 text-center">

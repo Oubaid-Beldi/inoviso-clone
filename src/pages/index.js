@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import Article from '../components/article'
+import Seo from "../components/seo"
 
 const HomePage = () => {
   const newsItems = [
@@ -57,6 +58,13 @@ const HomePage = () => {
   return (
     <Layout>
       {/* Hero Section with Swiper */}
+      <Seo
+        title="Accueil"
+        description="Inoviso, spécialiste de l'isolation thermique par l'extérieur. Améliorez votre confort, réduisez vos factures d'énergie. Devis gratuit en Loire-Atlantique."
+        keywords="isolation thermique extérieur, ITE, économies énergie, confort thermique, Nantes, Saint-Nazaire"
+        pathname="/"
+      />
+
       <Hero />
 
       {/* About Section */}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Layout from '../components/layout'
+import Seo from "../components/seo"
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -92,6 +93,12 @@ const ContactPage = () => {
   return (
     <Layout>
       {/* Hero Section */}
+      <Seo
+        title="Contact - Devis gratuit isolation"
+        description="Contactez Inoviso pour votre projet d'isolation thermique par l'extérieur. Devis gratuit, conseil personnalisé. 02 40 13 83 22 - Treillières, Loire-Atlantique."
+        keywords="contact Inoviso, devis gratuit isolation, conseil isolation, Treillières, Loire-Atlantique, 02 40 13 83 22"
+        pathname="/contact/"
+      />
       <section className="relative bg-gradient-to-r from-blue-600 to-green-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Contactez-nous</h1>
