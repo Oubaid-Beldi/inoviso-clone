@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Layout from '../components/layout'
 import Seo from "../components/seo"
+import Map from '../components/map'
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -295,24 +296,41 @@ const ContactPage = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Nous trouver</h2>
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="h-96 bg-gray-200 flex items-center justify-center">
-              {/* Ici vous pourriez intégrer Google Maps */}
-              <div className="text-center">
-                <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-gray-600">Carte interactive</p>
-                <p className="text-sm text-gray-500">5 rue des Frères Lumière, 44119 Treillières</p>
-              </div>
-            </div>
+{/* Map Section - UPDATED */}
+<section className="py-16 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Nous trouver</h2>
+    <div className="max-w-4xl mx-auto">
+      <Map />
+      <div className="bg-white p-6 rounded-b-lg shadow-md">
+        <div className="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 className="font-semibold text-gray-800 mb-2">Adresse</h3>
+            <p className="text-gray-600">
+              5 rue des Frères Lumière<br />
+              44119 Treillières<br />
+              France
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-800 mb-2">Itinéraire</h3>
+            <a 
+              href="https://www.google.com/maps/dir/?api=1&destination=5+rue+des+Frères+Lumière,+44119+Treillières,+France"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 4m0 13V4m-6 3l6-3" />
+              </svg>
+              Obtenir l'itinéraire
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Zone d'intervention */}
       <section className="py-16 bg-white">
